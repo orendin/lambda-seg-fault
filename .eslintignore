@@ -1,0 +1,13 @@
+*.json
+*.md
+build
+cdk.out
+coverage
+dist
+external
+jest.config.ts
+node_modules
+**/*.js
+*.js
+*.d.ts
+**/test/**

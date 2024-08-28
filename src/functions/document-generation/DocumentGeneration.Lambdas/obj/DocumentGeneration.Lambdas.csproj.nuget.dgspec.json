@@ -1,0 +1,231 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Lambdas\\DocumentGeneration.Lambdas.csproj": {}
+  },
+  "projects": {
+    "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Common\\DocumentGeneration.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Common\\DocumentGeneration.Common.csproj",
+        "projectName": "DocumentGeneration.Common",
+        "projectPath": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Common\\DocumentGeneration.Common.csproj",
+        "packagesPath": "C:\\Users\\ben.schwitter\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ben.schwitter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AWSSDK.SSO": {
+              "target": "Package",
+              "version": "[3.7.300.93, )"
+            },
+            "AWSSDK.SSOOIDC": {
+              "target": "Package",
+              "version": "[3.7.302.4, )"
+            },
+            "AWSSDK.SecretsManager.Caching": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Lambdas\\DocumentGeneration.Lambdas.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Lambdas\\DocumentGeneration.Lambdas.csproj",
+        "projectName": "DocumentGeneration.Lambdas",
+        "projectPath": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Lambdas\\DocumentGeneration.Lambdas.csproj",
+        "packagesPath": "C:\\Users\\ben.schwitter\\.nuget\\packages\\",
+        "outputPath": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Lambdas\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ben.schwitter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Common\\DocumentGeneration.Common.csproj": {
+                "projectPath": "C:\\work\\repos-test\\seg-fault-repro\\src\\functions\\document-generation\\DocumentGeneration.Common\\DocumentGeneration.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AWS.Lambda.Powertools.Logging": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
+            "Amazon.Lambda.APIGatewayEvents": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
+            "Amazon.Lambda.Core": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Amazon.Lambda.Serialization.SystemTextJson": {
+              "target": "Package",
+              "version": "[2.4.3, )"
+            },
+            "IronPdf": {
+              "target": "Package",
+              "version": "[2024.8.3, )"
+            },
+            "IronPdf.Linux": {
+              "target": "Package",
+              "version": "[2024.8.3, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.6, 8.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[8.0.6, 8.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.6, 8.0.6]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -13,10 +13,12 @@ We are using the latest versions of .net, Lambda as well as IronPdf.
 
 ## Setup and deployment
 
-1. Run `npm i`
-1. Authenticate against an AWS account (e.g. aws sso login)
-1. (Optional: to verify aws account setup) Run `npm run build` to run the CDK build against your account to see if you can reach AWS and build the cloud formation tempmlate
+1. Make sure you have node installed (e.g. `v18.5.0`)
+1. Make sure you the aws cli installed.
 1. Make sure you have Docker installed and running
+1. Run `npm i`
+1. Authenticate against an AWS account (e.g. `aws sso login`)
+1. (Optional: to verify aws account setup) Run `npm run build` to run the CDK build against your account to see if you can reach AWS and build the cloud formation tempmlate
 1. Run `npm run deploy` to deploy the stack to AWS, which will build the docker image and create all the resources
 1. After deployment succeeded, you will get back the API url. Make note of this
 1. Copy the API url into the test file `./load-test/boom.ts`, e.g. `const targetUrl = 'https://a6sd5fa6ds.execute-api.ap-southeast-2.amazonaws.com/v1/';`

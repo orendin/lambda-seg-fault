@@ -16,19 +16,19 @@ main()
 async function main(): Promise<void> {
   console.log(`Target Url: ${targetUrl}`);
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 50; i++) {
     console.log(`kick off block ${i}`);
     await Promise.all([
       createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
-      // createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
+      createCP(),
     ]);
     console.log(`block ${i} done`);
   }
@@ -49,7 +49,7 @@ async function createCP(): Promise<void> {
     const startTime = Date.now();
     const fetchOptions: RequestInit = requestFetchOptions();
     console.log(`calling CP`);
-    response = await fetch(targetUrl + '/v1/document-generation', {
+    response = await fetch(targetUrl + 'document-generation', {
       ...fetchOptions,
     });
     const endTime = Date.now();

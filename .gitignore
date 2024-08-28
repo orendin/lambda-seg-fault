@@ -59,23 +59,20 @@ dist
 .aws-sam/**/*.*
 
 # document generator Lambdas binaries and objects
-src/services/document-generation/DocumentGeneration.Lambdas/obj/*
-src/services/document-generation/DocumentGeneration.Lambdas/bin/*
-src/services/document-generation/DocumentGeneration.Lambdas.Tests/obj/*
-src/services/document-generation/DocumentGeneration.Lambdas.Tests/bin/*
+src/functions/document-generation/DocumentGeneration.Lambdas/obj/*
+src/functions/document-generation/DocumentGeneration.Lambdas/bin/*
+src/functions/document-generation/DocumentGeneration.Lambdas.Tests/obj/*
+src/functions/document-generation/DocumentGeneration.Lambdas.Tests/bin/*
 
 # document generator common project binaries and objects
-src/services/document-generation/DocumentGeneration.Common/obj/*
-src/services/document-generation/DocumentGeneration.Common/bin/*
-src/services/document-generation/DocumentGeneration.Common.Tests/obj/*
-src/services/document-generation/DocumentGeneration.Common.Tests/bin/*
-
-# It is for Visual Studio only to deploy, but since we're using CDK we don't need it
-src/services/document-generation/DocumentGeneration.Lambdas/aws-lambda-tools-defaults.json
+src/functions/document-generation/DocumentGeneration.Common/obj/*
+src/functions/document-generation/DocumentGeneration.Common/bin/*
+src/functions/document-generation/DocumentGeneration.Common.Tests/obj/*
+src/functions/document-generation/DocumentGeneration.Common.Tests/bin/*
 
 ### VisualStudioCode ###
 .vscode/*
-src/services/document-generation/.vs/*
+src/functions/document-generation/.vs/*
 
 # local .net settings
 appsettings.local.json

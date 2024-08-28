@@ -6,7 +6,7 @@ namespace DocumentGeneration.Lambdas;
 
 public class DocumentGenerationSettings
 {
-  public const string IronPdfSecretName = "IronPdf.License.LicenseKey";
+  public const string IronPdfSecretName = "SegFault.IronPdf.License.LicenseKey";
 
   private readonly IConfigurationService _configurationService;
   private readonly ILogger _logger;

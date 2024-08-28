@@ -28,6 +28,9 @@
     <Content Include="appsettings.local.sample.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <Content Include="Templates\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>    
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IronPdf" Version="2024.8.3" Condition="$([MSBuild]::IsOsPlatform('Windows'))" />

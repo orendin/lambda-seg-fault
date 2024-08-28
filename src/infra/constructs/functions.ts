@@ -20,10 +20,10 @@ export class SegFaultApiFunctions extends Construct {
       code: DockerImageCode.fromImageAsset('./src/functions/document-generation'),
       memorySize: 2048,
       timeout: Duration.seconds(120),
-      functionName: `document-generator`,
+      functionName: `seg-fault-document-generator`,
       description: 'Generates PDF documents',
     });
-    this.documentGenerator.addEnvironment('POWERTOOLS_SERVICE_NAME', 'document-generation');
+    this.documentGenerator.addEnvironment('POWERTOOLS_SERVICE_NAME', 'seg-fault-document-generation');
     this.documentGenerator.addEnvironment('POWERTOOLS_LOG_LEVEL', 'Information');
 
     // grant read permissions on the IronPdf secret to the document generator lambda.

@@ -16,7 +16,7 @@ main()
 async function main(): Promise<void> {
   console.log(`Target Url: ${targetUrl}`);
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 2; i++) {
     console.log(`kick off block ${i}`);
     await Promise.all([
       createCP(),

@@ -24,6 +24,14 @@ We are using the latest versions of .net, Lambda as well as IronPdf.
 1. You should now be ready to run post requests against your API to generate a pdf document, e.g. against `https://a6sd5fa6ds.execute-api.ap-southeast-2.amazonaws.com/v1/document-generation`
 1. See below load test which will fire concurrent requests against the Lambda to provoke the segmentation fault eventually.
 
+## Getting a single document via postman
+
+You can use postman to get the sample pdf which this repo generates once deployed.
+
+Use your url from above, e.g. `https://a6sd5fa6ds.execute-api.ap-southeast-2.amazonaws.com/v1/document-generation`
+
+![Postman request](image.png)
+
 ## Reproduction of the intermittent issue
 
 Run the crude load tests by executing `npx tsx ./load-test/boom.ts` from the console root.

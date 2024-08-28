@@ -25,7 +25,7 @@ export class SegFaultRestApi extends Construct {
         ),
         accessLogFormat: AccessLogFormat.jsonWithStandardFields(),
       },
-
+      binaryMediaTypes: ['*/*'],
     };
 
     const restApi = new RestApi(this, 'SegFaultApi', apiConfiguration);

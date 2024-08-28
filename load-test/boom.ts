@@ -1,5 +1,5 @@
-console.log(`Starting credit proposal load tests`);
-const targetUrl = 'https://hb6a3r8ri1.execute-api.ap-southeast-2.amazonaws.com/v1/';
+console.log(`Starting segmentation fault load tests`);
+const targetUrl = 'https://YOUR-URL-HERE.amazonaws.com/v1/';
 const results: Result[] = [];
 
 main()

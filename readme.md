@@ -32,7 +32,7 @@ You can use postman to get the sample pdf which this repo generates once deploye
 
 Use your url from above, e.g. `https://a6sd5fa6ds.execute-api.ap-southeast-2.amazonaws.com/v1/document-generation`
 
-![Postman request](image.png)
+![Postman request](image2.png)
 
 ## Reproduction of the intermittent issue
 

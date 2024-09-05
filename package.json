@@ -11,7 +11,8 @@
     "cdk": "cdk",
     "doc-gen-docker-build": "docker build ./src/services/document-generation",
     "build": "npx tsc && npx cdk synth",
-    "deploy": "npx cdk bootstrap && npx cdk deploy --require-approval never"
+    "deploy": "npx cdk bootstrap && npx cdk deploy --require-approval never",
+    "boom": "npx tsx ./load-test/boom.ts"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.115",

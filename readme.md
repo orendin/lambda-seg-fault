@@ -44,6 +44,12 @@ After running this a few times, we could usually reproduce the segmentation faul
 
 ![segmentation fault](image-1.png)
 
+## Adding custom GC.Collect
+Adding a custom ```GC.Collect();``` seems to fix the issue. However, it is not best practise to have to execute this manually.
+For more info and context, see: https://help.ironsoftware.com/tickets-view/details?back=tickets&ticketId=3158021300
+
+Instead, one day, we should be able to use a `using` statement with the ChromePdfRenderer, and the clean up of any unused objects should be implemented using the `Dispose` pattern on the IronPdf side.
+
 ## Enabled Debug Logging
 
 To get more verbose logging, enable Debug log in the `./src/infra/constructs/functions` file:

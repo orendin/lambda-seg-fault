@@ -30,7 +30,7 @@ async function main(): Promise<void> {
       createCP(),
       createCP(),
     ]);
-    console.log(`block ${i} done`);
+    console.log(`\nblock ${i} done`);
   }
 }
 
@@ -48,13 +48,13 @@ async function createCP(): Promise<void> {
 
     const startTime = Date.now();
     const fetchOptions: RequestInit = requestFetchOptions();
-    console.log(`calling CP`);
+    process.stdout.write(".");
     response = await fetch(targetUrl + 'document-generation', {
       ...fetchOptions,
     });
     const endTime = Date.now();
     const a = endTime - startTime;
-    console.log(`CP create finished; time taken: ${a}ms`);
+    process.stdout.write(`\nCP create finished; time taken: ${a}ms`);
     const contentType = response.headers.get("content-type") ?? '';
 
     if (response.status >= 200 && response.status < 300) {

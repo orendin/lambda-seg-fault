@@ -17,11 +17,14 @@ public class GeneratorFunction
   private readonly PdfGenerator _generator;
   private readonly ILogger _logger;
 
-    static GeneratorFunction()
+  static GeneratorFunction()
   {
     var logger = Logger.Create<GeneratorFunction>();
     logger.LogDebug("Static Generator Function triggered");
     PdfGenerator.InitializeIronPdf(logger);
+
+    AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionHandler;
+
     logger.LogDebug("Static Generator Function finished.");
   }
 
@@ -83,6 +86,11 @@ public class GeneratorFunction
         IsBase64Encoded = false
       };
     }
+    finally
+    {
+      //enable this to fix the issue.
+      //GC.Collect();
+    }
   }
   private static ServiceProvider BuildServiceProvider()
   {
@@ -95,6 +103,19 @@ public class GeneratorFunction
     serviceCollection.AddSingleton(serviceProvider => Logger.Create<GeneratorFunction>());
 
     return serviceCollection.BuildServiceProvider();
+  }
+
+  static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs e)
+  {
+    try
+    {
+      var logger = Logger.Create<GeneratorFunction>();
+      logger.LogError("Unhandled Exception: {Exception}", e.ExceptionObject);
+    }
+    catch
+    {
+      //to nothing since we can't log
+    }
   }
 }
 

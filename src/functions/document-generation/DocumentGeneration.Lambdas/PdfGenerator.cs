@@ -16,7 +16,8 @@ public class PdfGenerator
       RenderingOptions =
       {
         UseMarginsOnHeaderAndFooter = UseMargins.None,
-        CreatePdfFormsFromHtml = true
+        CreatePdfFormsFromHtml = true,
+
       }
     };
 
@@ -36,8 +37,8 @@ public class PdfGenerator
     //add additional Iron Pdf logging when debug level is set
     if (logLevel == "Debug")
     {
-      IronPdf.Logging.Logger.LoggingMode = IronPdf.Logging.Logger.LoggingModes.Custom;
-      IronPdf.Logging.Logger.CustomLogger = logger;
+      // IronPdf.Logging.Logger.LoggingMode = IronPdf.Logging.Logger.LoggingModes.Custom;
+      // IronPdf.Logging.Logger.CustomLogger = logger;
     }
 
     // we configure the dependencies ourselves in the Dockerfile
@@ -50,11 +51,12 @@ public class PdfGenerator
     Environment.SetEnvironmentVariable("TEMP", awsTmpPath, EnvironmentVariableTarget.Process);
     Environment.SetEnvironmentVariable("TMP", awsTmpPath, EnvironmentVariableTarget.Process);
     Installation.TempFolderPath = awsTmpPath;
-    Installation.CustomDeploymentDirectory = awsTmpPath;
-
     Installation.ChromeGpuMode = IronPdf.Engines.Chrome.ChromeGpuModes.Disabled;
     Installation.ChromeBrowserCachePath = awsTmpPath;
     Installation.CustomDeploymentDirectory = awsTmpPath;
+
+    Installation.ChromeBrowserLimit = 1;
+    Installation.SingleProcess = true;
 
     Installation.Initialize();
   }
